@@ -1,0 +1,23 @@
+class Solution {
+    static Long[] lcmAndGcd(Long A , Long B) {
+        
+        long a=A;
+        long b=B;
+         while(a!=0 && b!=0)
+        {
+            if(a>b)
+                a=a%b;
+                
+             else
+                b=b%a;
+            
+        }
+        
+       long g=Math.max(a,b);
+        
+       long l=(A*B)/g;
+       
+       Long ans[]={l,g};
+       return ans;
+    }
+};
